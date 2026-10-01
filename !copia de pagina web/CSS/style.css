@@ -1,0 +1,152 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #ededed;
+}
+
+.header, .producto, .mas-productos, .pie {
+    background-color: white;
+}
+
+.header {
+    background-color: #fff159;
+    padding: 15px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.logo img {
+    width: 40px;
+    height: auto;
+}
+
+.logo h2 {
+    font-size: 18px;
+    color: #2d3277;
+}
+
+.logo span {
+    color: #00a650;
+}
+
+.buscador input { padding: 8px; width: 250px; }
+
+.links, .usuario { display: flex; gap: 10px; }
+.links a, .usuario a { text-decoration: none; color: #333; font-size: 14px; }
+
+.contenedor {
+    width: 90%;
+    max-width: 1000px;
+    margin: 20px auto;
+}
+
+.producto {
+    padding: 20px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.galeria { display: flex; gap: 10px; }
+.miniaturas { display: flex; flex-direction: column; gap: 5px; }
+
+.miniaturas img {
+    width: 40px;
+    height: 40px;
+    border: 1px solid #ccc;
+}
+
+.imagen-principal img {
+    width: 100%;
+    max-width: 280px;
+}
+
+.info-producto {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 400px;
+}
+
+.precio { font-size: 28px; font-weight: bold; }
+.envio, .envio-card { color: #00a650; }
+
+.btn-comprar, .btn-carrito {
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn-comprar { background-color: #3483fa; color: white; }
+.btn-carrito { background-color: #e3edfb; color: #3483fa; }
+
+.mas-productos {
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 5px;
+}
+
+.mas-productos h2 { margin-bottom: 15px; font-size: 18px; }
+
+.tarjetas {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.tarjeta {
+    border: 1px solid #ddd;
+    padding: 10px;
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+.tarjeta img { width: 100%; max-width: 120px; }
+.tarjeta h3 { font-size: 14px; }
+.precio-card { font-weight: bold; }
+
+.pie {
+    padding: 20px;
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-around;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.columna h4 { margin-bottom: 8px; }
+.columna ul { list-style: none; }
+.columna a { text-decoration: none; color: #666; font-size: 13px; }
+
+
+@media (max-width: 768px) {
+    .tarjetas {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .tarjetas {
+        grid-template-columns: 1fr;
+    }
+}
